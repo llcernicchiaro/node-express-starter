@@ -1,0 +1,5 @@
+{
+  "*.ts": ["eslint --fix", "prettier --list-different --write --ignore-unknown"],
+  "*.md": "prettier --list-different",
+  "**/*": ["prettier --list-different --write --ignore-unknown"]
+}
