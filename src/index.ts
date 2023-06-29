@@ -3,6 +3,10 @@ import express, { type Express, type Request, type Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 
+import validateEnv from "@/utils/validateEnv.js";
+
+validateEnv();
+
 // App Variables
 const app: Express = express();
 const port = process.env.PORT;
@@ -13,18 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express - TypeScript Server");
+  res.send("Express - TypeScript Servers");
 });
 
-function start(): void {
-  if (port === undefined) {
-    console.log("The server can't start without a port!");
-    return;
-  }
-
-  app.listen(port, () => {
-    console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
-  });
-}
-
-start();
+app.listen(port, () => {
+  console.log(`⚡️[server]: Server is running at http://localhost:${port ?? ""}`);
+});

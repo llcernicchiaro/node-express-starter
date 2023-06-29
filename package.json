@@ -8,14 +8,17 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && NODE_ENV=production node dist/index.js",
-    "dev": "nodemon",
-    "prepare": "husky install"
+    "build": "tsup src",
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src",
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "envalid": "^7.3.1",
     "express": "^4.18.2",
     "helmet": "^7.0.0"
   },
@@ -30,9 +33,9 @@
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "nodemon": "^2.0.22",
     "prettier": "2.8.8",
-    "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
     "typescript": "^5.1.3"
   }
 }
