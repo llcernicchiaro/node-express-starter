@@ -2,6 +2,11 @@
 
 NodeJS starter/boilerplate code.
 
+## Code Stack
+
+- Server: ExpressJS
+- Logging: Winston/Morgan
+
 ## Lint/Style Stack
 
 - Eslint (`standard-with-typescript`)
