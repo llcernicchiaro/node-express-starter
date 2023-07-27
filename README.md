@@ -1,6 +1,6 @@
 # Node Starter
 
-NodeJS starter/boilerplate code.
+NodeJS with ExpressJS starter/boilerplate code.
 
 ## Code Stack
 
