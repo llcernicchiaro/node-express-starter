@@ -1,4 +1,3 @@
-import "dotenv/config";
 import express, { type Express, type Request, type Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -19,7 +18,7 @@ app.use(express.json());
 app.use(morganMiddleware);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express - TypeScript Servers");
+  res.send("Express - TypeScript Server");
 });
 
 app.listen(port, () => {

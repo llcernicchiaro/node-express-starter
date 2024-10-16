@@ -9,11 +9,11 @@ NodeJS with ExpressJS starter/boilerplate code.
 
 ## Lint/Style Stack
 
-- Eslint (`standard-with-typescript`)
+- ESLint
 - Prettier
 - Husky
-- Editorconfig
-- Lint-staged
+- EditorConfig
+- lint-staged
 
 # Requirements
 
