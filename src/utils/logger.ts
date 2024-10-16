@@ -7,7 +7,7 @@ export const logger = createLogger({
     format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     format.errors({ stack: true }),
     format.colorize({ all: true }),
-    format.printf((info) => `${info.timestamp as string} ${info.level}: ${info.message as string}`)
+    format.printf((info) => `${info.timestamp as string} ${info.level}: ${info.message as string}`),
   ),
   defaultMeta: { service: "your-service-name" },
   transports: [
@@ -27,5 +27,5 @@ const stream: StreamOptions = {
 
 export const morganMiddleware = morgan(
   ":method :url :status :res[content-length] - :response-time ms",
-  { stream }
+  { stream },
 );

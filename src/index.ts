@@ -3,8 +3,8 @@ import express, { type Express, type Request, type Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 
-import validateEnv from "@/utils/validateEnv.js";
-import { logger, morganMiddleware } from "@/utils/logger.js";
+import validateEnv from "./utils/validateEnv.ts";
+import { logger, morganMiddleware } from "./utils/logger.ts";
 
 validateEnv();
 
