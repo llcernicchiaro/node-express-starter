@@ -5,8 +5,11 @@
   "main": "index.js",
   "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "Lorenzo Cernicchiaro",
   "license": "ISC",
+  "engines": {
+    "node": ">= v22.9.0"
+  },
   "scripts": {
     "start": "node --watch --env-file=.env --experimental-strip-types src/index.ts",
     "prepare": "husky",
